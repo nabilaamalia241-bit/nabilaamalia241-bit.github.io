@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Middle Eastern food in the Main District.">
+  <meta name="author" content="Lazuardi Al-Muzaki">
+  <title>Book a Table | Little Lemon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Little Lemon</a>
+    <p class="tagline">Middle Eastern food in the Main District</p>
+    <p class="status">Open now &middot; until 22:00</p>
+  </header>
+  <nav aria-label="Main navigation"><ul><li><a href="index.html">Menu</a></li><li><a href="location.html">Location</a></li><li><a href="book.html" aria-current="page">Book a Table</a></li></ul></nav>
+  <main>
+    <h1>Book a Table</h1>
+    <p class="form-note">Demo form only. To confirm a reservation, please call (021) 555 0123.</p>
+    <form class="booking-form">
+      <label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required>
+      <label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required>
+      <label for="party">Party size</label><input type="number" id="party" name="party" min="1" step="1" required>
+      <fieldset><legend>Seating</legend>
+        <input type="radio" id="indoor" name="seating" value="indoor" checked><label for="indoor">Indoor</label>
+        <input type="radio" id="outdoor" name="seating" value="outdoor"><label for="outdoor">Outdoor</label>
+      </fieldset>
+      <label for="requests">Special requests</label><textarea id="requests" name="requests" rows="3"></textarea>
+      <button type="submit">Book a table</button>
+      <p id="booking-message" role="status"></p>
+    </form>
+    <script>
+      document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById('booking-message').textContent = 'This is a demo. Your reservation has not been sent. Please call (021) 555 0123 to book a table.';
+      });
+    </script>
+  </main>
+  <footer>
+    <p>123 Rome Road, Main District, Capital City</p>
+    <p>Open daily, 11:00&ndash;22:00 &middot; (021) 555 0123</p>
+  </footer>
+</body>
+</html>
